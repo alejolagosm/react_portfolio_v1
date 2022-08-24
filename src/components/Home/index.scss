@@ -1,0 +1,54 @@
+$primary-color: rgba(245, 21, 21, 0.8);
+
+.home-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    // width: 40%;
+    max-height: 90%;
+    h1 {
+      color: #fff;
+      font-size: 50px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: 400;
+    }
+    img {
+      width: 100px;
+      opacity: 0;
+      height: auto;
+      animation: rotateIn 2s linear both;
+      // animation-delay: -1s;
+    }
+
+    h2 {
+      color: #fff;
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 20px;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+      animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-top: 16px;
+      border: 1px solid $primary-color;
+      float: left;
+      animation: fadeIn 1s 2s backwards;
+      white-space: nowrap;
+
+      &:hover {
+        background: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+}
