@@ -1,0 +1,28 @@
+$primary-color: rgba(245, 21, 21, 0.8);
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+  margin-left: 5px;
+}
+
+.text-animate-hover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+  margin-left: 5px;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: $primary-color;
+  }
+}
+
+@for $i from 1 through 35 {
+  .text-animate._#{$i} {
+    animation-delay: #{calc($i / 10)}s;
+  }
+}
