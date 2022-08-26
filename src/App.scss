@@ -1,6 +1,7 @@
 $primary-color: rgba(245, 21, 21, 0.8);
 
 @import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -18,4 +19,15 @@ $primary-color: rgba(245, 21, 21, 0.8);
 input,
 text {
   font-family: 'Helvetica Neue';
+}
+
+.loader-active {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
 }

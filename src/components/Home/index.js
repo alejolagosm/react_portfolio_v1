@@ -1,9 +1,9 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import LogoAL from '../../assets/img/logoal.png'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
+import Loader from 'react-loaders'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -16,24 +16,26 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="container home-page">
-      <div className="text-zone">
-        <img src={LogoAL} alt="developer" />
-        <h1>
-          Hello, I'm &nbsp;
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={nameArray}
-            idx={15}
-          />
-        </h1>
-        <h2>Front-end developer and data Wizard</h2>
-        <Link to="/contact" className="flat-button">
-          Contact Me
-        </Link>
+    <>
+      <div className="container home-page">
+        <div className="text-zone">
+          <h1>
+            Hello, I'm &nbsp;
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={nameArray}
+              idx={15}
+            />
+          </h1>
+          <h2>Front-end developer and data Wizard</h2>
+          <Link to="/contact" className="flat-button">
+            Contact Me
+          </Link>
+        </div>
+        <Logo />
       </div>
-      <Logo />
-    </div>
+      <Loader type="pacman" />
+    </>
   )
 }
 
