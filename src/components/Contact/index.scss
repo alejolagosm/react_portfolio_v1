@@ -1,0 +1,157 @@
+$primary-color: rgba(245, 21, 21, 0.8);
+
+.contact-page {
+  .text-zone {
+    position: relative;
+    left: 10%;
+    top: 0%;
+    max-width: 80vw;
+    max-height: 50vh;
+    transform: translateY(0%);
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 50px;
+      font-family: 'Coolvetica';
+      color: $primary-color;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 16px;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: 400;
+      min-width: fit-content;
+      animation: pulse 1s;
+    }
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.contact-form {
+  min-width: 50%;
+  margin-top: 20px;
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 2s 2s forwards;
+      clear: both;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      border: 0;
+      background-color: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      color: #fff;
+      height: 50px;
+      padding: 20px;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+
+    .flat-button {
+      color: #fff;
+      background-color: $primary-color;
+      width: 100%;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #fff;
+        color: #115173;
+        scale: 0.95;
+      }
+    }
+  }
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding-bottom: 10px;
+  gap: 10px;
+
+  .info-map {
+    text-align: center;
+    background-color: #115173;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Helvetica';
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+    border-radius: 10px;
+
+    span {
+      font-size: 14px;
+      display: block;
+      padding-top: 20px;
+      color: #000;
+    }
+  }
+
+  .map-wrap {
+    background: rgba(8, 253, 216, 0.12);
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+    justify-self: stretch;
+    align-self: stretch;
+    width: 50%;
+    // height: 100%;
+  }
+
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: backInRight 1s 1.2s forwards;
+  }
+}
